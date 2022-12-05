@@ -1,0 +1,43 @@
+<a href="{% url 'api:home' %}">
+    Home
+</a>
+
+
+<table>
+    <tr>
+        <th>Number of neighbors</th>
+        <td>{{model.n_neighbors}}</td>
+    </tr>
+    <tr>
+        <th>Weights</th>
+        <td>{{model.weights}}</td>
+    </tr>
+    <tr>
+        <th>Algorithm</th>
+        <td>{{model.algorithm}}</td>
+    </tr>
+    <tr>
+        <th>Leaf size</th>
+        <td>{{model.leaf_size}}</td>
+    </tr>
+    <tr>
+        <th>p</th>
+        <td>{{model.p}}</td>
+    </tr>
+    <tr>
+        <th>Metric</th>
+        <td>{{model.metric}}</td>
+    </tr>
+    <tr>
+        <th>Train score</th>
+        <td>{{model.train_score}}</td>
+    </tr>
+    <tr>
+        <th>Test score</th>
+        <td>{{model.test_score}}</td>
+    </tr>
+</table> 
+Confusion matrix of the test set:
+{{cm_test|safe}}
+
+
